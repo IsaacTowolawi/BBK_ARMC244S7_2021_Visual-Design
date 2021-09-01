@@ -1,0 +1,187 @@
+@font-face {
+  font-family: Gotham-Black sans-serif;
+  src: url(/gotham-font/GothamBook.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Gotham-Black, sans-serif;
+  text-align: center;
+  margin: 5rem;
+  background: #111;
+  min-height: 100vh;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+}
+
+.container header .logo {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.container header ul {
+  position: relative;
+  display: flex;
+}
+
+.container header ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.container header ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 4px 10px;
+  color: #fff;
+}
+
+.container header ul li a:hover {
+  background: #fff;
+  color: #111;
+}
+.container header ul li a.active {
+  background: #fff;
+  color: #111;
+}
+
+.active h2,
+h3,
+h4 {
+  margin: 0px;
+  padding: 15px;
+  text-align: center;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  color: #fff;
+  line-height: 1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+p,
+a {
+  color: #fff;
+  font-size: 18px;
+  margin: 20px 0;
+}
+ul li {
+  color: #fff;
+  list-style: square;
+  text-align: justify;
+}
+
+.active ul {
+  padding: 5px;
+  background: rgb(37, 37, 37);
+  list-style-position: inside;
+
+  counter-reset: li;
+}
+
+.active li {
+  display: grid;
+  grid-template-columns: 100px 3fr;
+
+  counter-increment: li;
+}
+
+.active li::before {
+  content: "•";
+  text-align: end;
+  margin-inline-end: 0.3rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* Responsive for devices */
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container header ul li a {
+    position: relative;
+    padding: 0px 0px 0px;
+    bottom: 0 2px;
+    font-size: 7px;
+  }
+
+  .container h2,
+  h3,
+  h4,
+  h5,
+  p {
+    font-size: 10px;
+    padding: 0px;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .cart__item {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .cart__item {
+    grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .cart {
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem;
+  }
+}
